@@ -25,8 +25,8 @@ translator:
     - xform/([aeioumng])x/$1²/
     - xform/([aeioumng])q/$1³/
     - xform/([ptk])v/$1⁷/         # 入聲作789，不作136
-    - xform/([ptk])q/$1⁸/
     - xform/([ptk])qq/$1⁹/
+    - xform/([ptk])q/$1⁸/
     - xform/eoi$/oey/            # 水 seoi -> soey
     - xform/eo/oe/               # 出 ceot -> coet
     - xform/yu/y/                # 孫 syun -> syn
