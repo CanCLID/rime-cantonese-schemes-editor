@@ -1,0 +1,49 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema.yaml:/
+
+schema:
+  schema_id: jyut6ping3_rao
+  name: 粵語拼音（顯示饒秉才拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援饒秉才拼音顯示
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_rao
+  spelling_hints: 8
+  preedit_format:
+    - xform/([aeioumngptk])vv/$1⁴/
+    - xform/([aeioumngptk])xx/$1⁵/
+    - xform/([aeioumngptk])qq/$1⁶/
+    - xform/([aeioumngptk])v/$1¹/
+    - xform/([aeioumngptk])x/$1²/
+    - xform/([aeioumngptk])q/$1³/
+
+    - xform/(^|[ '])j/$1y/
+
+    - xform/(^|[ '])z([iy])/$1j$2/
+    - xform/(^|[ '])c([iy])/$1q$2/
+    - xform/(^|[ '])s([iy])/$1x$2/
+
+    - xform/(^|[ '])gw/$1gu/
+    - xform/(^|[ '])kw/$1ku/
+
+    - xform/([aeiou])p/$1b/
+    - xform/([aeiou])t/$1d/
+    - xform/([aeiou])k/$1g/
+    - xform/(aa|a)u/$1o/
+
+    - xform/(oe|eo)i/êu/
+    - xform/(oe|eo)/ê/
+    - xform/e/é/
+    - xform/aa/A/
+    - xform/a/e/
+    - xform/yu/ü/
+    - xform/([jqxy])ü/$1u/
+    - xform/A/a/
