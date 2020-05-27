@@ -1,0 +1,32 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema:/
+
+schema:
+  schema_id: jyut6ping3_wong
+  name: 粵語拼音（顯示黃錫凌拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援黃錫凌拼音顯示
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_wong
+  spelling_hints: 8
+  preedit_format:
+    - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
+    - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
+    - xform/(^|[ '])([^ ']+?)qq/$1ˍ$2/
+    - xform/(^|[ '])([^ ']+?)v/$1ˈ$2/
+    - xform/(^|[ '])([^ ']+?)x/$1ˊ$2/
+    - xform/(^|[ '])([^ ']+?)q/$1ˉ$2/
+    - xform/eoi/eue/
+    - xform/(oe|eo)/eu/
+    - xform/yu/ue/
+    - xform/(^|[ '])j/$1y/               # 將 zoeng-> dzoeng
+    - xform/(^|[ '])z/$1dz/               # 將 zoeng-> dzoeng
+    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng

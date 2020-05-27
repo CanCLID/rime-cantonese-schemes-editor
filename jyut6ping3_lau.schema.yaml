@@ -1,0 +1,38 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema.yaml:/
+
+schema:
+  schema_id: jyut6ping3_lau
+  name: 粵語拼音（顯示劉錫祥拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援劉錫祥拼音顯示
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_lau
+  spelling_hints: 8
+  preedit_format:
+    - xform/([aeioumngptk])vv/$1⁴/
+    - xform/([aeioumngptk])xx/$1⁵/
+    - xform/([aeioumngptk])qq/$1⁶/
+    - xform/([aeioumngptk])v/$1¹/
+    - xform/([aeioumngptk])x/$1²/
+    - xform/([aeioumngptk])q/$1³/
+    - xform/(^|[ '])c/$1ch/
+    - xform/(^|[ '])j/$1y/
+    - xform/(^|[ '])z/$1j/
+    - xform/o(vv?|xx?|qq?)?($|[ '])/oh$1$2/
+    - xform/ou(vv?|xx?|qq?)?($|[ '])/o$1$2/
+    - xform/u([int])/oo$1/
+    - xform/([^aeiouy])u$/$1oo/
+    - xform/oe(vv?|xx?|qq?)?($|[ '])/euh$1$2/
+    - xform/oe/eu/
+    - xform/eo/u/
+    - xform/yu/ue/
+    - xform/aa(vv?|xx?|qq?)?($|[ '])/a$1$2/

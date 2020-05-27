@@ -1,0 +1,33 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema:/
+
+schema:
+  schema_id: jyut6ping3_yale
+  name: 粵語拼音（顯示耶魯拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援耶魯拼音顯示
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_yale
+  spelling_hints: 8
+  preedit_format:
+    - xform/eu/ew/
+    - xform/(eo|oe)/eu/
+    - xform/(aa)($|[ 'vxq])/a$2/
+    - xform/(^|[ '])jy/$1y/
+    - xform/(^|[ '])j/$1y/
+    - xform/(^|[ '])z/$1j/
+    - xform/(^|[ '])c/$1ch/
+    - xform/([aeiou])([aeiou])*([mngptk]|ng)?vv/$1̀$2h$3/
+    - xform/([aeiou])([aeiou])*([mngptk]|ng)?xx/$1́$2h$3/
+    - xform/([aeiou])([aeiou])*([mngptk]|ng)?qq/$1$2h$3/
+    - xform/([aeiou])([aeioumngptk]+)?v/$1̄$2/
+    - xform/([aeiou])([aeioumngptk]+)?x/$1́$2/
+    - xform/([aeiou])([aeioumngptk]+)?q/$1$2/

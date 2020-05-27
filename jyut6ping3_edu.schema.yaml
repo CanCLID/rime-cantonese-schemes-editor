@@ -1,0 +1,34 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema:/
+
+schema:
+  schema_id: jyut6ping3_edu
+  name: 粵語拼音（顯示教院拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援教院拼音顯示
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_edu
+  spelling_hints: 8
+  preedit_format:
+    - xform/([aeioumng])vv/$1⁴/
+    - xform/([aeioumng])xx/$1⁵/
+    - xform/([aeioumng])qq/$1⁶/
+    - xform/([aeioumng])v/$1¹/
+    - xform/([aeioumng])x/$1²/
+    - xform/([aeioumng])q/$1³/
+    - xform/([ptk])v/$1⁷/         # 入聲作789，不作136
+    - xform/([ptk])q/$1⁸/
+    - xform/([ptk])qq/$1⁹/
+    - xform/eoi$/oey/            # 水 seoi -> soey
+    - xform/eo/oe/               # 出 ceot -> coet
+    - xform/yu/y/                # 孫 syun -> syn
+    - xform/(^|[ '])z/$1dz/               # 將 zoeng-> dzoeng
+    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng
