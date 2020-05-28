@@ -1,0 +1,51 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema:/
+
+schema:
+  schema_id: jyut6ping3_bridgman
+  name: 粵語拼音（顯示Bridgman拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援Bridgman(1841)拼音顯示 (註：聲調符號需自行調整)
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_bridgman
+  spelling_hints: 8
+  preedit_format:
+    - xform/(^|[ '])(kw|[ptkc])/$1$2‘/
+    - xform/(^|[ '])([bdgz])/$1\U$2/
+    - xlit|BDGZ|ptkc|
+    - xform/(^|[ '])c/$1ts/
+    - xform/(^|[ '])j/$1y/
+
+    - xform/ou(vv?|xx?|qq?)?($|[ '])/ò$1$2/
+    - xform/yu/ü/
+    - xform/([^aeou]|^)u($|[vxqit '])/$1ú$2/
+    - xform/([^aeoú]|^)i($|[vxqmnptú '])/$1í$2/
+    - xform/í(ng|k)/i$1/
+    - xform/un($|[vxq '])/ún$1/
+    - xform/ei/í/
+    - xform/eo/u/
+    - xform/oe($|[vxq '])/éu$1/
+    - xform/oe(ng|k)/éu$1/
+    - xform/aa/á/
+    - xform/e($|[vxq '])/é$1/
+    - xform/o($|[vxqntk '])/ó$1/
+    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1’$2$3$4/
+    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1’$2$3$4/
+
+    - xform/(^|[ '])([^ ']+?)vv/$1⊆$2/
+    - xform/(^|[ '])([^ ']+?)xx/$1⊆$2/
+    - xform/(^|[ '])(.)([^ptk ']+?)qq/$1$2$3⊇/
+    - xform/(^|[ '])(.)([^ptk ']+?)v/$1⊂$2$3/
+    - xform/(^|[ '])([^ ]+?)x/$1⊂$2/
+    - xform/(^|[ '])(.)([^ptk ']+?)q/$1$2$3⊃/
+    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])v/$1$2$3$4⊃/
+    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])qq/$1$2$3$4⊇/
+    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])q/$1$2$3$4/
