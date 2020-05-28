@@ -25,7 +25,7 @@ Wisner(1906)\*| `jyut6ping3_wisner.schema.yaml` | ts‘un mīn pat kòk híu
 Dyer-Ball(1883)\*| `jyut6ping3_db.schema.yaml` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>híú
 Eitel(1877)\*| `jyut6ping3_eitel.schema.yaml` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>hiú
 Williams(1856)\*| `jyut6ping3_williams.schema.yaml` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>hiú
-Chalmers(1855)\*| `jyut6ping3_bridgman.schema.yaml` | ts‘un meen put kok hew （唔標調）
+Chalmers(1855)\*| `jyut6ping3_chalmers.schema.yaml` | ts‘un meen put kok hew （唔標調）
 Bridgman(1841)\*| `jyut6ping3_bridgman.schema.yaml` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>híú
 Morrison(1828)\*| `jyut6ping3_morrison.schema.yaml` | tsyn meen păt kok hew
 [注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `jyut6ping3_bpmf_ng.schema.yaml` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ
