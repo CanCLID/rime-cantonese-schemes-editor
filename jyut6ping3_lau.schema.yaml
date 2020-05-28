@@ -29,8 +29,8 @@ translator:
     - xform/(^|[ '])z/$1j/
     - xform/o(vv?|xx?|qq?)?($|[ '])/oh$1$2/
     - xform/ou(vv?|xx?|qq?)?($|[ '])/o$1$2/
-    - xform/u([int])/oo$1/
-    - xform/([^aeiouy])u$/$1oo/
+    - xform/([^aeiou]|^)u($|[vxqit ;])/$1oo$2/
+    - xform/un($|[vxq ;])/oon$1/
     - xform/oe(vv?|xx?|qq?)?($|[ '])/euh$1$2/
     - xform/oe/eu/
     - xform/eo/u/

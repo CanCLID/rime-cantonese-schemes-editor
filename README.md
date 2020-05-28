@@ -19,6 +19,6 @@
 黃錫凌| `jyut6ping3_wong.schema.yaml` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu
 劉錫祥| `jyut6ping3_lau.schema.yaml` | cheun¹ min⁴ bat¹ gok³ hiu²
 饒秉才| `jyut6ping3_rao.schema.yaml` | cên¹ min⁴ bed¹ gog³ hiu²
+Meyer-Wempe| `jyut6ping3_mw.schema.yaml` | ˈts'un ˌmin ˈpat ˉkok ˊhiu
 [注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `jyut6ping3_bpmf_ng.schema.yaml` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ
 [注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `jyut6ping3_bpmf_cpg.schema.yaml` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ
-
