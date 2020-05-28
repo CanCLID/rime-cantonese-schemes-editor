@@ -27,7 +27,7 @@ Eitel(1877)\*| `jyut6ping3_eitel.schema.yaml` | <sub>⊂</sub>ts‘un <sub>⊆</
 Williams(1856)\*| `jyut6ping3_williams.schema.yaml` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>hiú
 Chalmers(1855)\*| `jyut6ping3_chalmers.schema.yaml` | ts‘un meen put kok hew （唔標調）
 Bridgman(1841)\*| `jyut6ping3_bridgman.schema.yaml` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>híú
-Morrison(1828)\*| `jyut6ping3_morrison.schema.yaml` | tsyn meen păt kok hew
+Morrison(1828)\*| `jyut6ping3_morrison.schema.yaml` | tsyn meen păt kok hew （唔標調）
 [注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `jyut6ping3_bpmf_ng.schema.yaml` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ
 [注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `jyut6ping3_bpmf_cpg.schema.yaml` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ
 
