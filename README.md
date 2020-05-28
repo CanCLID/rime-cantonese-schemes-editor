@@ -12,14 +12,16 @@
 
  方案名| 檔名 | 「春眠不覺曉」
 -----|------| ------
-[粵拼（跟機）](https://github.com/rime/rime-cantonese)| `jyut6ping3.schema.yaml` | ceon¹ min⁴ bat¹ gok³ hiu²
 [IPA（跟機）](https://github.com/rime/rime-cantonese)| `jyut6ping3_ipa.schema.yaml` | t͡sʰɵn˥ miːn˨˩ pɐt̚˥ kɔːk̚˧ hiːu˧˥
-耶魯（舊版）| `jyut6ping3_yale.schema.yaml` | chēun mìhn bāt gok híu
-耶魯（新版）| `jyut6ping3_yale_new.schema.yaml`|  cheun¹ min⁴ bat¹ gok³ hiu²
-教院| `jyut6ping3_edu.schema.yaml` |  tsoen¹ min⁴ bat⁷ gok⁸ hiu²
-黃錫凌| `jyut6ping3_wong.schema.yaml` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu
-劉錫祥| `jyut6ping3_lau.schema.yaml` | cheun¹ min⁴ bat¹ gok³ hiu²
-饒秉才| `jyut6ping3_rao.schema.yaml` | cên¹ min⁴ bed¹ gog³ hiu²
-Meyer-Wempe| `jyut6ping3_mw.schema.yaml` | ts'un mîn pat kòk híu
+[粵拼(1993)](https://github.com/rime/rime-cantonese)| `jyut6ping3.schema.yaml` | ceon¹ min⁴ bat¹ gok³ hiu²
+耶魯(1994)| `jyut6ping3_yale_new.schema.yaml`|  cheun¹ min⁴ bat¹ gok³ hiu²
+教院(1990)| `jyut6ping3_edu.schema.yaml` |  tsoen¹ min⁴ bat⁷ gok⁸ hiu²
+饒秉才(1981)| `jyut6ping3_rao.schema.yaml` | cên¹ min⁴ bed¹ gog³ hiu²
+劉錫祥(1977)| `jyut6ping3_lau.schema.yaml` | cheun¹ min⁴ bat¹ gok³ hiu²
+耶魯(1973)| `jyut6ping3_yale.schema.yaml` | chēun mìhn bāt gok híu
+黃錫凌(1941)| `jyut6ping3_wong.schema.yaml` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu
+Meyer-Wempe(1934)| `jyut6ping3_mw.schema.yaml` | ts'un mīn pat kòk híu
+Wisner(1906)| `jyut6ping3_wisner.schema.yaml` | ts'un mīn pat kòk híu
+Dyer-Ball(1883)| `jyut6ping3_db.schema.yaml` | <sub>⊂</sub>ts'un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>híú
 [注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `jyut6ping3_bpmf_ng.schema.yaml` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ
 [注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `jyut6ping3_bpmf_cpg.schema.yaml` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ

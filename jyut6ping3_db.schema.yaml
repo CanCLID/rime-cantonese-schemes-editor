@@ -1,0 +1,46 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema:/
+
+schema:
+  schema_id: jyut6ping3_db
+  name: 粵語拼音（顯示Dyer-Ball拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援Dyer-Ball(1883)拼音顯示 (註：聲調符號需自行調整)
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_db
+  spelling_hints: 8
+  preedit_format:
+    - xform/(^|[ '])(kw|[ptkc])/$1$2'/               # 將 zoeng-> dzoeng
+    - xform/(^|[ '])([bdgz])/$1\U$2/               # 將 zoeng-> dzoeng
+    - xlit|BDGZ|ptkc|
+    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng
+    - xform/(^|[ '])j/$1y/
+
+    - xform/ou(vv?|xx?|qq?)?($|[ '])/ò$1$2/
+    - xform/yu/ü/
+    - xform/([^aeou]|^)u($|[vxqit '])/$1ú$2/
+    - xform/([^aeoú]|^)i($|[vxqúmnpt '])/$1í$2/
+    - xform/un($|[vxq '])/ún$1/
+    - xform/ei/éi/
+    - xform/eo/u/
+    - xform/oe($|[vxq '])/ö$1/
+    - xform/oe(ng|k)/ö$1/
+    - xform/aa/á/
+
+    - xform/(^|[ ])([^ ]+?)vv/$1⊆$2/
+    - xform/(^|[ ])([^ ]+?)xx/$1⊆$2/
+    - xform/(^|[ ])(.)([^ptk ]+?)qq/$1$2$3⊇/
+    - xform/(^|[ ])(.)([^ptk ]+?)v/$1⊂$2$3/
+    - xform/(^|[ ])([^ ]+?)x/$1⊂$2/
+    - xform/(^|[ ])(.)([^ptk ]+?)q/$1$2$3⊃/
+    - xform/(^|[ ])(.)([^ptk ]+?)([ptk])v/$1$2$3$4⊃/
+    - xform/(^|[ ])(.)([^ptk ]+?)([ptk])qq/$1$2$3$4⊇/
+    - xform/(^|[ ])(.)([^ptk ]+?)([ptk])q/$1$2$3$4°/
