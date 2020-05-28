@@ -36,9 +36,9 @@ translator:
     - xform/oe(ng|k)/eu$1/
     - xform/aa(vv?|xx?|qq?)?($|[ ;])/a$1$2/
 
-    - xform/(^|[ ;])([^ ;]+?)vv/$1ˌ$2/
-    - xform/(^|[ ;])([^ ;]+?)xx/$1ˏ$2/
-    - xform/(^|[ ;])([^ ;]+?)qq/$1ˍ$2/
-    - xform/(^|[ ;])([^ ;]+?)v/$1ˈ$2/
-    - xform/(^|[ ;])([^ ;]+?)x/$1ˊ$2/
-    - xform/(^|[ ;])([^ ;]+?)q/$1ˉ$2/
+    - xform/([aeiou])([aeioumngptk]+)?vv/$1̂$2/
+    - xform/([aeiou])([aeioumngptk]+)?xx/$1̌$2/
+    - xform/([aeiou])([aeioumngptk]+)?qq/$1̄$2/
+    - xform/([aeiou])([aeioumngptk]+)?v/$1$2/
+    - xform/([aeiou])([aeioumngptk]+)?x/$1́$2/
+    - xform/([aeiou])([aeioumngptk]+)?q/$1̀$2/
