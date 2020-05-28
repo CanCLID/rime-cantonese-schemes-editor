@@ -1,0 +1,74 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema:/
+
+schema:
+  schema_id: jyut6ping3_morrison
+  name: 粵語拼音（顯示Morrison拼音）
+  version: "2020.05.25"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援Morrison(1828)拼音顯示 (註：唔標調)
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  dictionary: jyut6ping3
+  prism: jyut6ping3_morrison
+  spelling_hints: 8
+  preedit_format:
+    - xform/(^|[ '])([bdgz])/$1\U$2/
+    - xlit|BDGZ|ptkc|
+    - xform/(^|[ '])c/$1ts/
+    - xform/(^|[ '])j/$1y/
+
+    - xform/aai/AI/
+    - xform/aau/AOU/
+    - xform/aa/A/
+
+    - xform/ai/EI/
+    - xform/au/ăw/
+    - xform/a([tk]|ng)/ă$1/
+    - xform/a([mn])/U$1/
+
+    - xform/(^|[^aeiou])e($|[vxq '])/$1Ay$2/
+    - xform/(^|[^aeiou])ei/$1E/
+
+    - xform/oe($|[vxq '])/EUĕ$1/
+    - xform/oe(ng|k)/EO$1/
+
+    - xform/(^|[^aeiou])i($|[vxq '])/$1E$2/
+    - xform/(^|[^aeiou])iu/$1Ew/
+    - xform/(^|[^aeiou])i([mnpt])/$1EE$2/
+    - xform/EEng/Ing/
+
+    - xform/(^|[^aeiou])oi/$1Oy/
+    - xform/ou/Ow/
+    - xform/ong/Ong/
+    - xform/(^|[^aeiou])o(n|t)/$1OA$2/
+
+    - xform/eoi/Uy/
+    - xform/eon/yn/
+    - xform/eot/Ut/
+
+    - xform/(^|[^aeiouy])u($|[vxqnt '])/$1OO$2/
+    - xform/OOng/Ung/
+    - xform/ui/OOy/
+
+    - xform/yun/une/
+    - xform/yut/uet/
+    - xform/yu/u/
+
+    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1im$3$4/
+    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1ing$3$4/
+    - xform/(^|[ '])ng/$1g/
+
+    - xlit|AEIOU|aeiou|
+
+    - xform/([aeioumngptk])vv/$1⁴/
+    - xform/([aeioumngptk])xx/$1⁵/
+    - xform/([aeioumngptk])qq/$1⁶/
+    - xform/([aeioumngptk])v/$1¹/
+    - xform/([aeioumngptk])x/$1²/
+    - xform/([aeioumngptk])q/$1³/
