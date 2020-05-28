@@ -21,9 +21,9 @@ translator:
     - xform/eoi/eue/
     - xform/(oe|eo)/eu/
     - xform/yu/ue/
-    - xform/(^|[ '])j/$1y/               # 將 zoeng-> dzoeng
-    - xform/(^|[ '])z/$1dz/               # 將 zoeng-> dzoeng
-    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng
+    - xform/(^|[ '])j/$1y/
+    - xform/(^|[ '])z/$1dz/
+    - xform/(^|[ '])c/$1ts/              
     - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
     - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
     - xform/(^|[ '])([^ ']+?)qq/$1ˍ$2/

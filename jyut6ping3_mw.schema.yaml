@@ -18,11 +18,10 @@ translator:
   prism: jyut6ping3_mw
   spelling_hints: 8
   preedit_format:
-
-    - xform/(^|[ '])(kw|[ptkc])/$1$2'/               # 將 zoeng-> dzoeng
-    - xform/(^|[ '])([bdgz])/$1\U$2/               # 將 zoeng-> dzoeng
+    - xform/(^|[ '])(kw|[ptkc])/$1$2‘/
+    - xform/(^|[ '])([bdgz])/$1\U$2/
     - xlit|BDGZ|ptkc|
-    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng
+    - xform/(^|[ '])c/$1ts/               
     - xform/(^|[ '])j/$1y/
     - xform/o(vv?|xx?|qq?)?($|[ '])/oh$1$2/
     - xform/ou(vv?|xx?|qq?)?($|[ '])/o$1$2/
