@@ -13,28 +13,26 @@ schema:
     支援黃錫凌拼音顯示
     Telegram 用户交流組 https://t.me/rime_cantonese
 
-speller/delimiter: " ;"
-
 translator:
   dictionary: jyut6ping3
   prism: jyut6ping3_mw
   spelling_hints: 8
   preedit_format:
 
-    - xform/(^|[ ;])([ptkc])/$1$2'/               # 將 zoeng-> dzoeng
-    - xform/(^|[ ;])([bdgz])/$1\U$2/               # 將 zoeng-> dzoeng
+    - xform/(^|[ '])([ptkc])/$1$2'/               # 將 zoeng-> dzoeng
+    - xform/(^|[ '])([bdgz])/$1\U$2/               # 將 zoeng-> dzoeng
     - xlit|BDGZ|ptkc|
-    - xform/(^|[ ;])c/$1ts/               # 長 coeng-> tsoeng
-    - xform/(^|[ ;])j/$1y/
-    - xform/o(vv?|xx?|qq?)?($|[ ;])/oh$1$2/
-    - xform/ou(vv?|xx?|qq?)?($|[ ;])/o$1$2/
+    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng
+    - xform/(^|[ '])j/$1y/
+    - xform/o(vv?|xx?|qq?)?($|[ '])/oh$1$2/
+    - xform/ou(vv?|xx?|qq?)?($|[ '])/o$1$2/
     - xform/yu/ue/
-    - xform/([^aeiou]|^)u($|[vxqit ;])/$1oo$2/
-    - xform/un($|[vxq ;])/oon$1/
+    - xform/([^aeiou]|^)u($|[vxqit '])/$1oo$2/
+    - xform/un($|[vxq '])/oon$1/
     - xform/eo/u/
-    - xform/oe($|[vxq ;])/oeh$1/
+    - xform/oe($|[vxq '])/oeh$1/
     - xform/oe(ng|k)/eu$1/
-    - xform/aa(vv?|xx?|qq?)?($|[ ;])/a$1$2/
+    - xform/aa(vv?|xx?|qq?)?($|[ '])/a$1$2/
 
     - xform/([aeiou])([aeioumngptk]+)?vv/$1̂$2/
     - xform/([aeiou])([aeioumngptk]+)?xx/$1̌$2/
