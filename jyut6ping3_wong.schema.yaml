@@ -14,16 +14,14 @@ schema:
     Telegram 用户交流組 https://t.me/rime_cantonese
 
 translator:
-  dictionary: jyut6ping3
   prism: jyut6ping3_wong
-  spelling_hints: 8
   preedit_format:
     - xform/eoi/eue/
     - xform/(oe|eo)/eu/
     - xform/yu/ue/
     - xform/(^|[ '])j/$1y/
     - xform/(^|[ '])z/$1dz/
-    - xform/(^|[ '])c/$1ts/              
+    - xform/(^|[ '])c/$1ts/
     - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
     - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
     - xform/(^|[ '])([^ ']+?)qq/$1ˍ$2/

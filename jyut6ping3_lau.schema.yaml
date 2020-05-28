@@ -14,9 +14,7 @@ schema:
     Telegram 用户交流組 https://t.me/rime_cantonese
 
 translator:
-  dictionary: jyut6ping3
   prism: jyut6ping3_lau
-  spelling_hints: 8
   preedit_format:
     - xform/([aeioumngptk])vv/$1⁴/
     - xform/([aeioumngptk])xx/$1⁵/
