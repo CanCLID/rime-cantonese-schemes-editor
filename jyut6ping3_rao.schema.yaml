@@ -5,8 +5,8 @@ __include: jyut6ping3.schema.yaml:/
 
 schema:
   schema_id: jyut6ping3_rao
-  name: 粵語拼音（顯示饒秉才拼音）
-  version: "2020.05.25"
+  name: 粵語拼音（饒秉才拼音版）
+  version: "2020.05.29"
   description: |-
     採用香港語言學學會粵語拼音方案
     https://www.lshk.org/jyutping
