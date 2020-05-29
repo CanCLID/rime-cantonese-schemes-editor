@@ -23,6 +23,7 @@
 |耶魯 |1973| `yale` | chēun mìhn bāt gok híu|
 |[注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)|1950| `bpmf_cpg` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ|
 |黃錫凌羅馬拼音 |1941| `wong` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu|
+|寬式w國際音標 |1941| `wong_ipa` | ˈtsœn ˌmin ˈbɐt ˉgɔk ˊhiu|
 |Meyer-Wempe\* |1934| `mw` | ts‘un mīn pat kòk híu|
 |[注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf) |1932| `bpmf_ng` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ|
 |Wisner\* |1906| `wisner` | ts‘un mīn pat kòk híu|

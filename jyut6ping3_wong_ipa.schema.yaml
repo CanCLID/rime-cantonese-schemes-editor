@@ -4,24 +4,32 @@
 __include: jyut6ping3.schema:/
 
 schema:
-  schema_id: jyut6ping3_wong
-  name: 粵語拼音（顯示黃錫凌拼音）
+  schema_id: jyut6ping3_wong_ipa
+  name: 粵語拼音（顯示寬式國際音標）
   version: "2020.05.25"
   description: |-
     採用香港語言學學會粵語拼音方案
     https://www.lshk.org/jyutping
-    支援黃錫凌羅馬拼音顯示
+    支援黃錫凌寬式國際音標顯示
     Telegram 用户交流組 https://t.me/rime_cantonese
 
 translator:
-  prism: jyut6ping3_wong
+  prism: jyut6ping3_wong_ipa
   preedit_format:
-    - xform/eoi/eue/
-    - xform/(oe|eo)/eu/
-    - xform/yu/ue/
-    - xform/(^|[ '])j/$1y/
     - xform/(^|[ '])z/$1dz/
     - xform/(^|[ '])c/$1ts/
+    - xform/ng/ŋ/
+    - xform/aa/A/
+    - xform/a/ɐ/
+    - xform/A/a/
+    - xform/(^|[^aeiou])e($|[vxqumnŋpk '])/$1ɛ$2/
+    - xform/(^|[^aeiou])o($|[vxqinŋtk '])/$1ɔ$2/
+    - xform/(oe|eo)i/œy/
+    - xform/(oe|eo)/œ/
+    - xform/yu/y/
+    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1$2̩$3$4/
+    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1$2̩$3$4/
+
     - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
     - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
     - xform/(^|[ '])([^ ']+?)qq/$1ˍ$2/
