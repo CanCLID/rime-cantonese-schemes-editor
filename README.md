@@ -12,26 +12,26 @@
 
 ## 方案列表
 
- 方案名| `jyut6ping3_#######.schema.yaml` | 「春眠不覺曉」
------|------| ------
-[IPA（跟機）](https://github.com/rime/rime-cantonese)| `ipa` | t͡sʰɵn˥ miːn˨˩ pɐt̚˥ kɔːk̚˧ hiːu˧˥
-[粵拼(1993)](https://github.com/rime/rime-cantonese)| N/A | ceon¹ min⁴ bat¹ gok³ hiu²
-耶魯(1994)| `yale_new`|  cheun¹ min⁴ bat¹ gok³ hiu²
-教院(1990)| `edu` |  tsoen¹ min⁴ bat⁷ gok⁸ hiu²
-饒秉才(1981)| `rao` | cên¹ min⁴ bed¹ gog³ hiu²
-劉錫祥(1977)| `lau` | cheun¹ min⁴ bat¹ gok³ hiu²
-耶魯(1973)| `yale` | chēun mìhn bāt gok híu
-黃錫凌(1941)| `wong` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu
-Meyer-Wempe(1934)\*| `mw` | ts‘un mīn pat kòk híu
-Wisner(1906)\*| `wisner` | ts‘un mīn pat kòk híu
-Dyer-Ball(1883)\*| `db` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>híú
-Eitel(1877)\*| `eitel` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>hiú
-Williams(1856)\*| `williams` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>hiú
-Chalmers(1855)\*| `chalmers` | ts‘un meen put kok hew （唔標調）
-Bridgman(1841)\*| `bridgman` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>híú
-Morrison(1828)\*| `morrison` | tsyn meen păt kok hew （唔標調）
-[注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `bpmf_ng` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ
-[注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)| `bpmf_cpg` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ
+|方案名（按時序排列）|發表年份| 檔名 | 示例：「春眠不覺曉」|
+|----- | :------: | :-----: | ------|
+|[IPA](https://github.com/rime/rime-cantonese)| - | `ipa` | t͡sʰɵn˥ miːn˨˩ pɐt̚˥ kɔːk̚˧ hiːu˧˥|
+|耶魯（修訂）|1994| `yale_new`|  cheun¹ min⁴ bat¹ gok³ hiu²|
+|**[粵拼](https://github.com/rime/rime-cantonese)**|**1993**| - | **ceon¹ min⁴ bat¹ gok³ hiu²**|
+|教院 |1990| `edu` |  tsoen¹ min⁴ bat⁷ gok⁸ hiu²|
+|饒秉才 |1981| `rao` | cên¹ min⁴ bed¹ gog³ hiu²|
+|劉錫祥 |1977| `lau` | cheun¹ min⁴ bat¹ gok³ hiu²|
+|耶魯 |1973| `yale` | chēun mìhn bāt gok híu|
+|[注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)|1950| `bpmf_cpg` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ|
+|黃錫凌羅馬拼音 |1941| `wong` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu|
+|Meyer-Wempe\* |1934| `mw` | ts‘un mīn pat kòk híu|
+|[注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf) |1932| `bpmf_ng` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ|
+|Wisner\* |1906| `wisner` | ts‘un mīn pat kòk híu|
+|Dyer-Ball\* |1883| `db` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>híú|
+|Eitel\* |1877| `eitel` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>hiú|
+|Williams\* |1856| `williams` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>hiú|
+|Chalmers\* |1855| `chalmers` | ts‘un meen put kok hew （唔標調）|
+|Bridgman\* |1841| `bridgman` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok <sup>⊂</sup>híú|
+|Morrison\* |1828| `morrison` | tsyn meen păt kok hew （唔標調）|
 
 > \* 參考：片岡新(2014)：“香港政府粵語拼音”：一個亂中有序的系統，《中國語文通訊》，93(1)，頁9-25。
 
