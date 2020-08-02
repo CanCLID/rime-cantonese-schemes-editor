@@ -100,6 +100,6 @@ translator:
     - xform/qq?($|[ '])/Q$1/
 
     # 入聲唔標調
+    - xform/([ptk])(v|q|qq)($|[ '])/$1$3/
     
     - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|"
-    - xform/([ptk])(v|q|qq)($|[ '])/$1$3/
