@@ -1,6 +1,6 @@
 # 中州韻粵語分歧拼音系統排版工具
 
-**℞**: `tanxpyox/rime-cantonese-schemes-editor`
+**℞**: `canclid/rime-cantonese-schemes-editor`
 
 依賴於: [`rime-cantonese`](https://github.com/rime/rime-cantonese)
 
@@ -21,12 +21,12 @@
 |饒秉才 |1981| `rao` | cên¹ min⁴ bed¹ gog³ hiu²|
 |劉錫祥 |1977| `lau` | cheun¹ min⁴ bat¹ gok³ hiu²|
 |耶魯 |1973| `yale` | chēun mìhn bāt gok híu|
-|[注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)|1950| `bpmf_cpg` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ|
+|[注音（人民政府）](https://github.com/canclid/rime-cantonese-bpmf)|1950| `bpmf_cpg` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ|
 |粵語羅馬字 (Barnett-Chao) |1947| `bc` | tson min pat koak xio|
 |黃錫凌羅馬拼音 |1941| `wong` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu|
 |寬式國際音標 |1941| `wong_ipa` | ˈtsœn ˌmin ˈbɐt ˉgɔk ˊhiu|
 |Meyer-Wempe\* |1934| `mw` | ts‘un mīn pat kòk híu|
-|[注音（國民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf) |1932| `bpmf_ng` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ|
+|[注音（國民政府）](https://github.com/canclid/rime-cantonese-bpmf) |1932| `bpmf_ng` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ|
 |Wisner\* |1906| `wisner` | ts‘un mīn pat kòk híu|
 |Dyer-Ball\* |1883| `db` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>híú|
 |Eitel\* |1877| `eitel` | <sub>⊂</sub>ts‘un <sub>⊆</sub>mín pat<sup>⊃</sup> kok° <sup>⊂</sup>hiú|
@@ -41,9 +41,9 @@
 
 * 使用[東風破](https://github.com/rime/plum)指令：
 ```sh
-bash rime-install tanxpyox/rime-cantonese-schemes-editor
+bash rime-install canclid/rime-cantonese-schemes-editor
 ```
 * 使用Windows小狼毫配置器：
   * 【輸入法設定】--> 【獲取更多輸入法檔案】
-  * 輸入 `tanxpyox/rime-cantonese-schemes-editor`，拍 <kbd>Enter</kbd>
-* 或者撳[呢度](https://github.com/tanxpyox/rime-cantonese-schemes-editor/archive/master.zip)下載成個程式庫，然後將啲檔案搬入去[用戶資料夾](https://github.com/rime/home/wiki/UserData#%E4%BD%8D%E7%BD%AE)度。
+  * 輸入 `canclid/rime-cantonese-schemes-editor`，拍 <kbd>Enter</kbd>
+* 或者撳[呢度](https://github.com/canclid/rime-cantonese-schemes-editor/archive/master.zip)下載成個程式庫，然後將啲檔案搬入去[用戶資料夾](https://github.com/rime/home/wiki/UserData#%E4%BD%8D%E7%BD%AE)度。
