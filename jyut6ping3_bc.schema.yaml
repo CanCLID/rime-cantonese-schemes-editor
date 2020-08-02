@@ -1,0 +1,105 @@
+# Rime schema
+# encoding: utf-8
+
+__include: jyut6ping3.schema:/
+
+schema:
+  schema_id: jyut6ping3_bc
+  name: 粵語拼音（趙氏粵語羅馬字版）
+  version: "2020.07.20"
+  description: |-
+    採用香港語言學學會粵語拼音方案
+    https://www.lshk.org/jyutping
+    支援趙氏粵語羅馬字顯示
+    （必須輸入聲調，否則將出現錯誤）
+    Telegram 用户交流組 https://t.me/rime_cantonese
+
+translator:
+  prism: jyut6ping3_bc
+  preedit_format:
+  # Separate high tones and low tones: 
+    - xform/(^|[ '])([^vxq]+?)(vv|xx|qq)/$1\U$2$3/    # 陽聲嘅話 --> 變晒大寫
+
+  # /m/ /ng/
+    - xform/(^|[ '])m($|[vxq '])/$1MU$2/
+    - xform/(^|[ '])ng($|[vxq '])/$1NGU$2/
+
+  # 聲母轉換
+    # 陰聲
+    - xform/(^|[ '])p/$1ph/
+    - xform/(^|[ '])b/$1p/
+    - xform/(^|[ '])m/$1mh/
+
+    - xform/(^|[ '])t/$1th/
+    - xform/(^|[ '])d/$1t/
+    - xform/(^|[ '])n/$1nh/
+    - xform/(^|[ '])l/$1lh/
+
+    - xform/(^|[ '])kw/$1khw/
+    - xform/(^|[ '])gw/$1kw/
+
+    - xform/(^|[ '])k([^w])/$1kh$2/
+    - xform/(^|[ '])g([^w])/$1k$2/
+    - xform/(^|[ '])ng([^vxq '])/$1ngh$2/
+    - xform/(^|[ '])h/$1x/
+
+    - xform/(^|[ '])z/$1tz/
+    - xform/(^|[ '])c/$1ts/
+
+    - xform/(^|[ '])j/$1i/
+    - xform/(^|[ '])w/$1u/
+
+    # 陽聲
+    - xform/(^|[ '])P/$1BH/
+    - xform/(^|[ '])F/$1V/
+
+    - xform/(^|[ '])T/$1DH/
+
+    - xform/(^|[ '])K/$1GH/
+
+    - xform/(^|[ '])Z/$1DZ/
+    - xform/(^|[ '])C/$1DS/
+    - xform/(^|[ '])S/$1Z/
+
+    - xform/(^|[ '])KW/$1GHW/
+    - xform/(^|[ '])J/$1Y/
+  
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|"
+  # 韻母轉換
+    - xform/aa($|[vxq '])/A$1/
+
+    - xform/oe/EU/
+    - xform/eng($|[vxq '])/EANG$1/
+    - xform/ek($|[vxq '])/EAK$1/
+
+    - xform/ing($|[vxq '])/ENG$1/
+    - xform/ik($|[vxq '])/EK$1/
+
+    - xform/eo([int])($|[vxq '])/O\U$1$2/
+    - xform/o([intk]|ng)($|[vxq '])/OA\U$1$2/
+
+    - xform/yu/u/
+    - xform/u(ng|k)($|[vxq '])/O\U$1$2/
+
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|"
+  # 聲調顯示
+    - xform/vv?($|[ '])/$1/ # 平聲唔標調
+    
+    # 上聲
+    - xform/ixx?($|[ '])/E$1/
+    - xform/uxx?($|[ '])/O$1/
+    - xform/ngxx?($|[ '])/G$1/
+    - xform/xx?($|[ '])/X$1/
+
+    # 去聲
+    - xform/iqq?($|[ '])/Y$1/
+    - xform/uqq?($|[ '])/W$1/
+    - xform/mqq?($|[ '])/MM$1/
+    - xform/nqq?($|[ '])/NN$1/
+    - xform/ngqq?($|[ '])/Q$1/
+    - xform/qq?($|[ '])/Q$1/
+
+    # 入聲唔標調
+    
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|"
+    - xform/([ptk])(v|q|qq)($|[ '])/$1$3/

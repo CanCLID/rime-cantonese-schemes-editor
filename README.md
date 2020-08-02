@@ -22,6 +22,7 @@
 |劉錫祥 |1977| `lau` | cheun¹ min⁴ bat¹ gok³ hiu²|
 |耶魯 |1973| `yale` | chēun mìhn bāt gok híu|
 |[注音（人民政府）](https://github.com/tanxpyox/rime-cantonese-bpmf)|1950| `bpmf_cpg` |ㄑㆾㄋˉ ㄇㄧㄋˊ ㄅㆿㆵ˙ ㄍㄛㆻ ㄏㄧㄨˇ|
+|粵語羅馬字 (Barnett-Chao) |1947| `bc` | tson min pat koak xio|
 |黃錫凌羅馬拼音 |1941| `wong` |  ˈtseun ˌmin ˈbat ˉgok ˊhiu|
 |寬式國際音標 |1941| `wong_ipa` | ˈtsœn ˌmin ˈbɐt ˉgɔk ˊhiu|
 |Meyer-Wempe\* |1934| `mw` | ts‘un mīn pat kòk híu|
