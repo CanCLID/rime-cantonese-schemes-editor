@@ -1,3 +1,5 @@
+<div lang="yue-hk">
+
 # 中州韻粵語分歧拼音系統排版工具
 
 **℞**: `canclid/rime-cantonese-schemes-editor`
@@ -47,3 +49,5 @@ bash rime-install canclid/rime-cantonese-schemes-editor
   * 【輸入法設定】--> 【獲取更多輸入法檔案】
   * 輸入 `canclid/rime-cantonese-schemes-editor`，拍 <kbd>Enter</kbd>
 * 或者撳[呢度](https://github.com/canclid/rime-cantonese-schemes-editor/archive/master.zip)下載成個程式庫，然後將啲檔案搬入去[用戶資料夾](https://github.com/rime/home/wiki/UserData#%E4%BD%8D%E7%BD%AE)度。
+
+</div>
