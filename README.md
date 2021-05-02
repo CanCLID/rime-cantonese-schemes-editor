@@ -16,7 +16,7 @@
 
 |方案名（按時序排列）|發表年份| 檔名 | 示例：「春眠不覺曉」|
 |----- | :------: | :-----: | ------|
-|[IPA](https://github.com/rime/rime-cantonese)| - | `ipa` | t͡sʰɵn˥ miːn˨˩ pɐt̚˥ kɔːk̚˧ hiːu˧˥|
+|[IPA](https://github.com/rime/rime-cantonese)| - | `ipa` | t͡sʰɵn˥ miːn˨˩ pɐt̚˥ kɔːk̚˧ hiːu̯˧˥|
 |耶魯（修訂）|1994| `yale_new`|  cheun¹ min⁴ bat¹ gok³ hiu²|
 |**[粵拼](https://github.com/rime/rime-cantonese)**|**1993**| - | **ceon¹ min⁴ bat¹ gok³ hiu²**|
 |教院 |1990| `edu` |  tsoen¹ min⁴ bat⁷ gok⁸ hiu²|
