@@ -31,14 +31,15 @@
 |Meyer-Wempe\* |1934| `mw` | ts‘un mīn pat kòk híu|
 |[注音（國民政府）](https://github.com/canclid/rime-cantonese-bpmf) |1932| `bpmf_ng` |ㄘ￥ㄣˉ ㄇㄧㄣˊ ㄅㆿㆵ˙ ㄍㄛㆶ ㄏㄧㄨˇ|
 |Wisner\* |1906| `wisner` | ts‘un mīn pat kòk híu|
-|Dyer-Ball\* |1883| `db` | ꜀ts‘un ꜁mín pat꜆ kok° ꜂híú|
-|Eitel\* |1877| `eitel` | ꜀ts‘un ꜁mín pat꜆ kok° ꜂hiú|
-|Williams\* |1856| `williams` | ꜀ts‘un ꜁mín pat꜆ kok ꜂hiú|
+|Dyer-Ball\*† |1883| `db` | ꜀ts‘un ꜁mín pat꜆ kok° ꜂híú|
+|Eitel\*† |1877| `eitel` | ꜀ts‘un ꜁mín pat꜆ kok° ꜂hiú|
+|Williams\*† |1856| `williams` | ꜀ts‘un ꜁mín pat꜆ kok ꜂hiú|
 |Chalmers\* |1855| `chalmers` | ts‘un meen put kok hew （唔標調）|
-|Bridgman\* |1841| `bridgman` | ꜀ts‘un ꜁mín pat꜆ kok ꜂híú|
+|Bridgman\*† |1841| `bridgman` | ꜀ts‘un ꜁mín pat꜆ kok ꜂híú|
 |Morrison\* |1828| `morrison` | tsyn meen păt kok hew （唔標調）|
 
-> \* 參考：片岡新(2014)：“香港政府粵語拼音”：一個亂中有序的系統，《中國語文通訊》，93(1)，頁9-25。
+> \* 參考：片岡新(2014)：“香港政府粵語拼音”：一個亂中有序的系統，《中國語文通訊》，93(1)，頁9-25。<br> 
+> † 需要安裝使用支援 `U+A70X MODIFIER LETTER CHINESE TONE XXX` 區塊嘅字體。
 
 ## 安裝方法
 
