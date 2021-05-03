@@ -19,7 +19,7 @@ translator:
   prism: jyut6ping3_bc
   preedit_format:
   # 分辨陰陽聲 
-    - xform/(^|[ '])([^vxq]+?)(vv|xx|qq)/$1\U$2$3/    # 陽聲嘅話 --> 變晒大寫
+    - xform/(^|[ '])([^vxq]+?)(vv|xx|qq)/$1\U$2$3\E/    # 陽聲嘅話 --> 變晒大寫
 
   # /m/ /ng/ 獨立音節
     - xform/(^|[ '])m($|[vxq '])/$1MU$2/
@@ -62,7 +62,7 @@ translator:
     - xform/(^|[ '])KW/$1GHW/
     - xform/(^|[ '])J/$1Y/
   
-    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|"
+    - xform/[A-Z]/\L$&\E/    # 變晒小寫
 
   # 韻母轉換
     - xform/aa($|[vxq '])/A$1/
@@ -80,7 +80,7 @@ translator:
     - xform/yu/u/
     - xform/u(ng|k)($|[vxq '])/O\U$1$2/
 
-    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|"
+    - xform/[A-Z]/\L$&\E/    # 變晒小寫
  
   # 聲調顯示
     # 入聲唔標調
@@ -103,4 +103,4 @@ translator:
     - xform/ngqq?($|[ '])/Q$1/
     - xform/qq?($|[ '])/H$1/
 
-    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|abcdefghijklmnopqrstuvwxyz|"
+    - xform/[A-Z]/\L$&\E/    # 變晒小寫
