@@ -18,12 +18,28 @@ schema:
 translator:
   prism: jyut6ping3_bc
   preedit_format:
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
   # 分辨陰陽聲 
-    - xform/(^|[ '])([^vxq]+?)(vv|xx|qq)/$1\U$2$3\E/    # 陽聲嘅話 --> 變晒大寫
+    - xform/(^|[ '])(\D+?)([456])/$1\U$2$3\E/    # 陽聲嘅話 --> 變晒大寫
 
   # /m/ /ng/ 獨立音節
-    - xform/(^|[ '])m($|[vxq '])/$1MU$2/
-    - xform/(^|[ '])ng($|[vxq '])/$1NGU$2/
+    - xform/(^|[ '])m($|[ '\d])/$1MU$2/
+    - xform/(^|[ '])ng($|[ '\d])/$1NGU$2/
 
   # 聲母轉換
     # 陰聲
@@ -38,9 +54,9 @@ translator:
 
     - xform/(^|[ '])k/$1kh/
     - xform/(^|[ '])g/$1k/
-    - xform/(^|[ '])ng([^vxq '])/$1ngh$2/
+    - xform/(^|[ '])ng([^ '\d])/$1ngh$2/
     - xform/(^|[ '])h/$1x/
- 
+
     - xform/(^|[ '])z/$1tz/
     - xform/(^|[ '])c/$1ts/
 
@@ -61,46 +77,46 @@ translator:
 
     - xform/(^|[ '])KW/$1GHW/
     - xform/(^|[ '])J/$1Y/
-  
+
     - xform/[A-Z]/\L$&\E/    # 變晒小寫
 
   # 韻母轉換
-    - xform/aa($|[vxq '])/A$1/
+    - xform/aa($|[ '\d])/A$1/
 
     - xform/oe/EU/
-    - xform/eng($|[vxq '])/EANG$1/
-    - xform/ek($|[vxq '])/EAK$1/
+    - xform/eng($|[ '\d])/EANG$1/
+    - xform/ek($|[ '\d])/EAK$1/
 
-    - xform/ing($|[vxq '])/ENG$1/
-    - xform/ik($|[vxq '])/EK$1/
+    - xform/ing($|[ '\d])/ENG$1/
+    - xform/ik($|[ '\d])/EK$1/
 
-    - xform/eo([int])($|[vxq '])/O\U$1$2/
-    - xform/o([intk]|ng)($|[vxq '])/OA\U$1$2/
+    - xform/eo([int])($|[ '\d])/O\U$1$2/
+    - xform/o([intk]|ng)($|[ '\d])/OA\U$1$2/
 
     - xform/yu/u/
-    - xform/u(ng|k)($|[vxq '])/O\U$1$2/
+    - xform/u(ng|k)($|[ '\d])/O\U$1$2/
 
     - xform/[A-Z]/\L$&\E/    # 變晒小寫
- 
+
   # 聲調顯示
     # 入聲唔標調
-    - xform/([ptk])(v|q|qq)($|[ '])/$1$3/
+    - xform/([ptk])\d($|[ '])/$1$2/
 
     # 平聲唔標調
-    - xform/vv?($|[ '])/$1/
-    
+    - xform/[14]($|[ '])/$1/
+
     # 上聲
-    - xform/([aeou])ixx?($|[ '])/$1E$2/
-    - xform/([aeio])uxx?($|[ '])/$1O$2/
-    - xform/ngxx?($|[ '])/G$1/
-    - xform/xx?($|[ '])/X$1/
+    - xform/([aeou])i[25]($|[ '])/$1E$2/
+    - xform/([aeio])u[25]($|[ '])/$1O$2/
+    - xform/ng[25]($|[ '])/G$1/
+    - xform/[25]($|[ '])/X$1/
 
     # 去聲
-    - xform/([aeou])iqq?($|[ '])/$1Y$2/
-    - xform/([aeio])uqq?($|[ '])/$1W$2/
-    - xform/mqq?($|[ '])/MM$1/
-    - xform/nqq?($|[ '])/NN$1/
-    - xform/ngqq?($|[ '])/Q$1/
-    - xform/qq?($|[ '])/H$1/
+    - xform/([aeou])i[36]($|[ '])/$1Y$2/
+    - xform/([aeio])u[36]($|[ '])/$1W$2/
+    - xform/m[36]($|[ '])/MM$1/
+    - xform/n[36]($|[ '])/NN$1/
+    - xform/ng[36]($|[ '])/Q$1/
+    - xform/[36]($|[ '])/H$1/
 
     - xform/[A-Z]/\L$&\E/    # 變晒小寫

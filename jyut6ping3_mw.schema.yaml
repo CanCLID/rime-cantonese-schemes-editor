@@ -16,24 +16,40 @@ schema:
 translator:
   prism: jyut6ping3_mw
   preedit_format:
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
     - xform/(^|[ '])(kw|[ptkc])/$1$2‘/
-    - xform/(^|[ '])([bdgz])/$1\U$2/
-    - xlit|BDGZ|ptkc|
+    - xform/(^|[ '])([bdgz])/$1\U$2\E/
+    - xlit/BDGZ/ptkc/
     - xform/(^|[ '])c/$1ts/
     - xform/(^|[ '])j/$1y/
-    - xform/o(vv?|xx?|qq?)?($|[ '])/oh$1$2/
-    - xform/ou(vv?|xx?|qq?)?($|[ '])/o$1$2/
+    - xform/o($|[ '\d])/oh$1/
+    - xform/ou($|[ '\d])/o$1/
     - xform/yu/ue/
-    - xform/([^aeiou]|^)u($|[vxqit '])/$1oo$2/
-    - xform/un($|[vxq '])/oon$1/
+    - xform/([^aeiou]|^)u($|[it '\d])/$1oo$2/
+    - xform/un($|[ '\d])/oon$1/
     - xform/eo/u/
-    - xform/oe($|[vxq '])/oeh$1/
+    - xform/oe($|[ '\d])/oeh$1/
     - xform/oe(ng|k)/eu$1/
-    - xform/aa(vv?|xx?|qq?)?($|[ '])/a$1$2/
+    - xform/aa($|[ '\d])/a$1/
 
-    - xform/([aeiou])([aeioumngptk]+)?vv/$1̄$2/
-    - xform/([aeiou])([aeioumngptk]+)?xx/$1̌$2/
-    - xform/([aeiou])([aeioumngptk]+)?qq/$1̂$2/
-    - xform/([aeiou])([aeioumngptk]+)?v/$1$2/
-    - xform/([aeiou])([aeioumngptk]+)?x/$1́$2/
-    - xform/([aeiou])([aeioumngptk]+)?q/$1̀$2/
+    - xform/([aeiou])([aeioumngptk]+)?4/$1̄$2/
+    - xform/([aeiou])([aeioumngptk]+)?5/$1̌$2/
+    - xform/([aeiou])([aeioumngptk]+)?6/$1̂$2/
+    - xform/([aeiou])([aeioumngptk]+)?1/$1$2/
+    - xform/([aeiou])([aeioumngptk]+)?2/$1́$2/
+    - xform/([aeiou])([aeioumngptk]+)?3/$1̀$2/

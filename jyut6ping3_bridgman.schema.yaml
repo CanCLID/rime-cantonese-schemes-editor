@@ -16,34 +16,49 @@ schema:
 translator:
   prism: jyut6ping3_bridgman
   preedit_format:
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
     - xform/(^|[ '])(kw|[ptkc])/$1$2‘/
-    - xform/(^|[ '])([bdgz])/$1\U$2/
-    - xlit|BDGZ|ptkc|
+    - xform/(^|[ '])([bdgz])/$1\U$2\E/
+    - xlit/BDGZ/ptkc/
     - xform/(^|[ '])c/$1ts/
     - xform/(^|[ '])j/$1y/
 
-    - xform/ou(vv?|xx?|qq?)?($|[ '])/ò$1$2/
+    - xform/ou($|[ '\d])/ò$1$2/
     - xform/yu/ü/
-    - xform/([^aeou]|^)u($|[vxqit '])/$1ú$2/
-    - xform/([^aeoú]|^)i($|[vxqmnptú '])/$1í$2/
+    - xform/([^aeou]|^)u($|[it '\d])/$1ú$2/
+    - xform/([^aeoú]|^)i($|[mnptú '\d])/$1í$2/
     - xform/í(ng|k)/i$1/
-    - xform/un($|[vxq '])/ún$1/
+    - xform/un($|[ '\d])/ún$1/
     - xform/ei/í/
     - xform/eo/u/
-    - xform/oe($|[vxq '])/éu$1/
+    - xform/oe($|[ '\d])/éu$1/
     - xform/oe(ng|k)/éu$1/
     - xform/aa/á/
-    - xform/e($|[vxq '])/é$1/
-    - xform/o($|[vxqntk '])/ó$1/
-    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1’$2$3$4/
-    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1’$2$3$4/
+    - xform/e($|[ '\d])/é$1/
+    - xform/o($|[ntk '\d])/ó$1/
+    - xform/(^|[ '])(m|ng)($|[ '\d])/$1’$2$3/
 
-    - xform/(^|[ '])([^ ']+?)vv/$1꜁$2/
-    - xform/(^|[ '])([^ ']+?)xx/$1꜃$2/
-    - xform/(^|[ '])(.)([^ptk ']+?)qq/$1$2$3꜅/
-    - xform/(^|[ '])(.)([^ptk ']+?)v/$1꜀$2$3/
-    - xform/(^|[ '])([^ ]+?)x/$1꜂$2/
-    - xform/(^|[ '])(.)([^ptk ']+?)q/$1$2$3꜄/
-    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])v/$1$2$3$4꜆/
-    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])qq/$1$2$3$4꜇/
-    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])q/$1$2$3$4/
+    - xform/(^|[ '])([^ ']+?)4/$1꜁$2/
+    - xform/(^|[ '])([^ ']+?)5/$1꜃$2/
+    - xform/(^|[ '])(.)([^ptk ']+?)6/$1$2$3꜅/
+    - xform/(^|[ '])(.)([^ptk ']+?)1/$1꜀$2$3/
+    - xform/(^|[ '])([^ ]+?)2/$1꜂$2/
+    - xform/(^|[ '])(.)([^ptk ']+?)3/$1$2$3꜄/
+    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])1/$1$2$3$4꜆/
+    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])6/$1$2$3$4꜇/
+    - xform/(^|[ '])(.)([^ptk ']+?)([ptk])3/$1$2$3$4/

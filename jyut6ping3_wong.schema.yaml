@@ -16,15 +16,31 @@ schema:
 translator:
   prism: jyut6ping3_wong
   preedit_format:
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
     - xform/eoi/eue/
-    - xform/(oe|eo)/eu/
+    - xform/oe|eo/eu/
     - xform/yu/ue/
     - xform/(^|[ '])j/$1y/
     - xform/(^|[ '])z/$1dz/
     - xform/(^|[ '])c/$1ts/
-    - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
-    - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
-    - xform/(^|[ '])([^ ']+?)qq/$1ˍ$2/
-    - xform/(^|[ '])([^ ']+?)v/$1ˈ$2/
-    - xform/(^|[ '])([^ ']+?)x/$1ˊ$2/
-    - xform/(^|[ '])([^ ']+?)q/$1ˉ$2/
+    - xform/(^|[ '])([^ ']+?)4/$1ˌ$2/
+    - xform/(^|[ '])([^ ']+?)5/$1ˏ$2/
+    - xform/(^|[ '])([^ ']+?)6/$1ˍ$2/
+    - xform/(^|[ '])([^ ']+?)1/$1ˈ$2/
+    - xform/(^|[ '])([^ ']+?)2/$1ˊ$2/
+    - xform/(^|[ '])([^ ']+?)3/$1ˉ$2/

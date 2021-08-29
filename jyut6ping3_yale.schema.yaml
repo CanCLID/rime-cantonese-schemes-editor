@@ -16,16 +16,32 @@ schema:
 translator:
   prism: jyut6ping3_yale
   preedit_format:
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
     - xform/eu/ew/
-    - xform/(eo|oe)/eu/
-    - xform/(aa)($|[ 'vxq])/a$2/
+    - xform/eo|oe/eu/
+    - xform/aa(?=$|[ '\d])/a/
     - xform/(^|[ '])jy/$1y/
     - xform/(^|[ '])j/$1y/
     - xform/(^|[ '])z/$1j/
     - xform/(^|[ '])c/$1ch/
-    - xform/([aeiou])([aeiou])*([mngptk]|ng)?vv/$1̀$2h$3/
-    - xform/([aeiou])([aeiou])*([mngptk]|ng)?xx/$1́$2h$3/
-    - xform/([aeiou])([aeiou])*([mngptk]|ng)?qq/$1$2h$3/
-    - xform/([aeiou])([aeioumngptk]+)?v/$1̄$2/
-    - xform/([aeiou])([aeioumngptk]+)?x/$1́$2/
-    - xform/([aeiou])([aeioumngptk]+)?q/$1$2/
+    - xform/([aeiou])([aeiou])*([mngptk]|ng)?4/$1̀$2h$3/
+    - xform/([aeiou])([aeiou])*([mngptk]|ng)?5/$1́$2h$3/
+    - xform/([aeiou])([aeiou])*([mngptk]|ng)?6/$1$2h$3/
+    - xform/([aeiou])([aeioumngptk]+)?1/$1̄$2/
+    - xform/([aeiou])([aeioumngptk]+)?2/$1́$2/
+    - xform/([aeiou])([aeioumngptk]+)?3/$1$2/

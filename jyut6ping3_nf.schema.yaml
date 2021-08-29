@@ -16,6 +16,22 @@ schema:
 translator:
   prism: jyut6ping3_nf
   preedit_format:
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
     - xform/eoi/œ̈ü/
     - xform/a/ä/
     - xform/ää/a/
@@ -29,9 +45,9 @@ translator:
     - xform/z/dz/
     - xform/c/ts/
     - xform/j/y/
-    - xform/([aeioumngptk])vv/$1꜖/
-    - xform/([aeioumngptk])xx/$1꜖꜔/
-    - xform/([aeioumngptk])qq/$1꜕/
-    - xform/([aeioumngptk])v/$1꜒/
-    - xform/([aeioumngptk])x/$1꜖꜒/
-    - xform/([aeioumngptk])q/$1꜔/
+    - xform/([aeioumngptk])4/$1꜖/
+    - xform/([aeioumngptk])5/$1꜖꜔/
+    - xform/([aeioumngptk])6/$1꜕/
+    - xform/([aeioumngptk])1/$1꜒/
+    - xform/([aeioumngptk])2/$1꜖꜒/
+    - xform/([aeioumngptk])3/$1꜔/

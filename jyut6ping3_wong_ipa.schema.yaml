@@ -16,23 +16,38 @@ schema:
 translator:
   prism: jyut6ping3_wong_ipa
   preedit_format:
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
     - xform/(^|[ '])z/$1dz/
     - xform/(^|[ '])c/$1ts/
     - xform/ng/ŋ/
     - xform/aa/A/
     - xform/a/ɐ/
     - xform/A/a/
-    - xform/(^|[^aeiou])e($|[vxqumnŋpk '])/$1ɛ$2/
-    - xform/(^|[^aeiou])o($|[vxqinŋtk '])/$1ɔ$2/
+    - xform/(^|[^aeiou])e($|[umnŋpk '\d])/$1ɛ$2/
+    - xform/(^|[^aeiou])o($|[inŋtk '\d])/$1ɔ$2/
     - xform/(oe|eo)i/œy/
     - xform/(oe|eo)/œ/
     - xform/yu/y/
-    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1$2̩$3$4/
-    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1$2̩$3$4/
+    - xform/(^|[ '])(m|ng)($|[ '\d])/$1$2̩$3/
 
-    - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
-    - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
-    - xform/(^|[ '])([^ ']+?)qq/$1ˍ$2/
-    - xform/(^|[ '])([^ ']+?)v/$1ˈ$2/
-    - xform/(^|[ '])([^ ']+?)x/$1ˊ$2/
-    - xform/(^|[ '])([^ ']+?)q/$1ˉ$2/
+    - xform/(^|[ '])([^ ']+?)4/$1ˌ$2/
+    - xform/(^|[ '])([^ ']+?)5/$1ˏ$2/
+    - xform/(^|[ '])([^ ']+?)6/$1ˍ$2/
+    - xform/(^|[ '])([^ ']+?)1/$1ˈ$2/
+    - xform/(^|[ '])([^ ']+?)2/$1ˊ$2/
+    - xform/(^|[ '])([^ ']+?)3/$1ˉ$2/

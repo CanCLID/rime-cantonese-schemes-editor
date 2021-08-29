@@ -16,8 +16,24 @@ schema:
 translator:
   prism: jyut6ping3_morrison
   preedit_format:
-    - xform/(^|[ '])([bdgz])/$1\U$2/
-    - xlit|BDGZ|ptkc|
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
+    - xform/(^|[ '])([bdgz])/$1\U$2\E/
+    - xlit/BDGZ/ptkc/
     - xform/(^|[ '])c/$1ts/
     - xform/(^|[ '])j/$1y/
 
@@ -30,13 +46,13 @@ translator:
     - xform/a([tk]|ng)/ă$1/
     - xform/a([mn])/U$1/
 
-    - xform/(^|[^aeiou])e($|[vxq '])/$1Ay$2/
+    - xform/(^|[^aeiou])e($|[ '\d])/$1Ay$2/
     - xform/(^|[^aeiou])ei/$1E/
 
-    - xform/oe($|[vxq '])/EUĕ$1/
+    - xform/oe($|[ '\d])/EUĕ$1/
     - xform/oe(ng|k)/EO$1/
 
-    - xform/(^|[^aeiou])i($|[vxq '])/$1E$2/
+    - xform/(^|[^aeiou])i($|[ '\d])/$1E$2/
     - xform/(^|[^aeiou])iu/$1Ew/
     - xform/(^|[^aeiou])i([mnpt])/$1EE$2/
     - xform/EEng/Ing/
@@ -50,7 +66,7 @@ translator:
     - xform/eon/yn/
     - xform/eot/Ut/
 
-    - xform/(^|[^aeiouy])u($|[vxqnt '])/$1OO$2/
+    - xform/(^|[^aeiouy])u($|[nt '\d])/$1OO$2/
     - xform/OOng/Ung/
     - xform/ui/OOy/
 
@@ -58,15 +74,8 @@ translator:
     - xform/yut/uet/
     - xform/yu/u/
 
-    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1im$3$4/
-    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1ing$3$4/
+    - xform/(^|[ '])(m|ng)($|[ '\d])/$1i$2$3$4/
     - xform/(^|[ '])ng/$1g/
 
-    - xlit|AEIOU|aeiou|
-
-    - xform/([aeioumngptk])vv/$1⁴/
-    - xform/([aeioumngptk])xx/$1⁵/
-    - xform/([aeioumngptk])qq/$1⁶/
-    - xform/([aeioumngptk])v/$1¹/
-    - xform/([aeioumngptk])x/$1²/
-    - xform/([aeioumngptk])q/$1³/
+    - xlit/AEIOU/aeiou/
+    - xlit/123456/¹²³⁴⁵⁶/

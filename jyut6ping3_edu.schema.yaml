@@ -16,17 +16,28 @@ schema:
 translator:
   prism: jyut6ping3_edu
   preedit_format:
-    - xform/([aeioumngptk])vv/$1⁴/
-    - xform/([aeioumngptk])xx/$1⁵/
-    - xform/([aeioumng])qq/$1⁶/
-    - xform/([aeioumng])v/$1¹/
-    - xform/([aeioumngptk])x/$1²/
-    - xform/([aeioumng])q/$1³/
-    - xform/([ptk])v/$1⁷/         # 入聲作789，不作136
-    - xform/([ptk])qq/$1⁹/
-    - xform/([ptk])q/$1⁸/
-    - xform/eoi$/oey/            # 水 seoi -> soey
-    - xform/eo/oe/               # 出 ceot -> coet
-    - xform/yu/y/                # 孫 syun -> syn
-    - xform/(^|[ '])z/$1dz/               # 將 zoeng-> dzoeng
-    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
+
+    - xform/eoi/oey/
+    - xform/eo/oe/
+    - xform/yu/y/
+    - xform/z/dz/
+    - xform/c/ts/
+    - xform/(?<=[ptk])1/⁷/
+    - xform/(?<=[ptk])3/⁸/
+    - xform/(?<=[ptk])6/⁹/
+    - xlit/123456/¹²³⁴⁵⁶/

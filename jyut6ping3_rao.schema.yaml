@@ -16,12 +16,21 @@ schema:
 translator:
   prism: jyut6ping3_rao
   preedit_format:
-    - xform/([aeioumngptk])vv/$1⁴/
-    - xform/([aeioumngptk])xx/$1⁵/
-    - xform/([aeioumngptk])qq/$1⁶/
-    - xform/([aeioumngptk])v/$1¹/
-    - xform/([aeioumngptk])x/$1²/
-    - xform/([aeioumngptk])q/$1³/
+    # ---------- Jyutping normalization starts ----------
+    - xform/(?!^)(?<![ '])qq/6/
+    - xform/(?!^)(?<![ '])xx/5/
+    - xform/(?!^)(?<![ '])vv/4/
+    - xform/(?!^)(?<![ '])q/3/
+    - xform/(?!^)(?<![ '])x/2/
+    - xform/(?!^)(?<![ '])v/1/
+    - xform/q(?=[aeiou])//
+    - xform/r|(?<!a)a(?=$|[ '\d])/aa/
+    - xform/oe(?!$|ng|[k '\d])/eo/
+    - xform/eo(?=$|ng|[k '\d])/oe/
+    - xform/(?<=eo)y/i/
+    - xform/((?=^)|(?<=[ ']))(y(?=$|[aeio '\d]|u(ng|k))|(?=y))/j/
+    - xform/(?<=j)u(?!ng|k)|y(?!u)/yu/
+    # ----------- Jyutping normalization ends -----------
 
     - xform/(^|[ '])j/$1y/
 
@@ -45,3 +54,5 @@ translator:
     - xform/yu/ü/
     - xform/([jqxy])ü/$1u/
     - xform/A/a/
+
+    - xlit/123456/¹²³⁴⁵⁶/
