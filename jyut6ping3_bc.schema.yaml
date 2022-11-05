@@ -18,14 +18,28 @@ schema:
 translator:
   prism: jyut6ping3_bc
   preedit_format:
-  # 分辨陰陽聲 
-    - xform/(^|[ '])([^vxq]+?)(vv|xx|qq)/$1\U$2$3\E/    # 陽聲嘅話 --> 變晒大寫
+    ############## 正則化：轉換為正確粵拼 ##############
+    - xform/([^ 'a])a(?=$|[ '])|aa?(?=[vxq])/$1aa/
+    - xform/(^|[ '])[jy]u(?!ng|k)/$1jyu/
+    - xform/(^|[ '])y(?=$|[ '])/$1j/
+    - xform/(^|[ '])yu?(n|t)?(?=$|[vxq '])/$1jyu$2/
+    - xform/(^|[ '])y/$1j/
+    - xform/(oe|eo)y(?=$|[vxq '])/eoi/
+    - xform/yu?/yu/
+    - xform/oe([int])(?=$|[vxq '])/eo$1/
+    - xform/eo(ng|k)?(?=$|[vxq '])/oe$1/
+    - xform/q(?=[aeiou])//
+    - xform/(g|k)wu/$1u/
+    ###################################################
 
-  # /m/ /ng/ 獨立音節
-    - xform/(^|[ '])m($|[vxq '])/$1MU$2/
-    - xform/(^|[ '])ng($|[vxq '])/$1NGU$2/
+    # 分辨陰陽聲
+    - xform/(^|[ '])([^vxq]+?)(vv|xx|qq)/$1\U$2$3\E/ # 陽聲嘅話，變晒大寫
 
-  # 聲母轉換
+    # /m/ /ng/ 獨立音節
+    - xform/(^|[ 'h])m($|[vxq '])/$1MU$2/
+    - xform/(^|[ 'h])ng($|[vxq '])/$1NGU$2/
+
+    # 聲母轉換
     # 陰聲
     - xform/(^|[ '])p/$1ph/
     - xform/(^|[ '])b/$1p/
@@ -40,7 +54,7 @@ translator:
     - xform/(^|[ '])g/$1k/
     - xform/(^|[ '])ng([^vxq '])/$1ngh$2/
     - xform/(^|[ '])h/$1x/
- 
+
     - xform/(^|[ '])z/$1tz/
     - xform/(^|[ '])c/$1ts/
 
@@ -61,10 +75,10 @@ translator:
 
     - xform/(^|[ '])KW/$1GHW/
     - xform/(^|[ '])J/$1Y/
-  
-    - xform/[A-Z]/\L$&\E/    # 變晒小寫
 
-  # 韻母轉換
+    - xform/[A-Z]/\L$&\E/ # 變晒小寫
+
+    # 韻母轉換
     - xform/aa($|[vxq '])/A$1/
 
     - xform/oe/EU/
@@ -74,21 +88,21 @@ translator:
     - xform/ing($|[vxq '])/ENG$1/
     - xform/ik($|[vxq '])/EK$1/
 
-    - xform/eo([int])($|[vxq '])/O\U$1$2/
-    - xform/o([intk]|ng)($|[vxq '])/OA\U$1$2/
+    - xform/eo([int])($|[vxq '])/O\U$1\E$2/
+    - xform/o([intk]|ng)($|[vxq '])/OA\U$1\E$2/
 
     - xform/yu/u/
-    - xform/u(ng|k)($|[vxq '])/O\U$1$2/
+    - xform/u(ng|k)($|[vxq '])/O\U$1\E$2/
 
-    - xform/[A-Z]/\L$&\E/    # 變晒小寫
- 
-  # 聲調顯示
+    - xform/[A-Z]/\L$&\E/ # 變晒小寫
+
+    # 聲調顯示
     # 入聲唔標調
     - xform/([ptk])(v|q|qq)($|[ '])/$1$3/
 
     # 平聲唔標調
     - xform/vv?($|[ '])/$1/
-    
+
     # 上聲
     - xform/([aeou])ixx?($|[ '])/$1E$2/
     - xform/([aeio])uxx?($|[ '])/$1O$2/
@@ -103,4 +117,4 @@ translator:
     - xform/ngqq?($|[ '])/Q$1/
     - xform/qq?($|[ '])/H$1/
 
-    - xform/[A-Z]/\L$&\E/    # 變晒小寫
+    - xform/[A-Z]/\L$&\E/ # 變晒小寫

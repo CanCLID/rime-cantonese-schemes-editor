@@ -16,17 +16,32 @@ schema:
 translator:
   prism: jyut6ping3_edu
   preedit_format:
+    ############## 正則化：轉換為正確粵拼 ##############
+    - xform/([^ 'a])a(?=$|[ '])|aa?(?=[vxq])/$1aa/
+    - xform/(^|[ '])[jy]u(?!ng|k)/$1jyu/
+    - xform/(^|[ '])y(?=$|[ '])/$1j/
+    - xform/(^|[ '])yu?(n|t)?(?=$|[vxq '])/$1jyu$2/
+    - xform/(^|[ '])y/$1j/
+    - xform/(oe|eo)y(?=$|[vxq '])/eoi/
+    - xform/yu?/yu/
+    - xform/oe([int])(?=$|[vxq '])/eo$1/
+    - xform/eo(ng|k)?(?=$|[vxq '])/oe$1/
+    - xform/q(?=[aeiou])//
+    - xform/(g|k)wu/$1u/
+    ###################################################
+
+    - xform/(^|[ '])z/$1dz/
+    - xform/(^|[ '])c/$1ts/
+    - xform/eoi/oey/
+    - xform/eo/oe/
+    - xform/yu/y/
+
     - xform/([aeioumngptk])vv/$1⁴/
     - xform/([aeioumngptk])xx/$1⁵/
     - xform/([aeioumng])qq/$1⁶/
     - xform/([aeioumng])v/$1¹/
     - xform/([aeioumngptk])x/$1²/
     - xform/([aeioumng])q/$1³/
-    - xform/([ptk])v/$1⁷/         # 入聲作789，不作136
+    - xform/([ptk])v/$1⁷/
     - xform/([ptk])qq/$1⁹/
     - xform/([ptk])q/$1⁸/
-    - xform/eoi$/oey/            # 水 seoi -> soey
-    - xform/eo/oe/               # 出 ceot -> coet
-    - xform/yu/y/                # 孫 syun -> syn
-    - xform/(^|[ '])z/$1dz/               # 將 zoeng-> dzoeng
-    - xform/(^|[ '])c/$1ts/               # 長 coeng-> tsoeng

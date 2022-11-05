@@ -16,12 +16,27 @@ schema:
 translator:
   prism: jyut6ping3_wong
   preedit_format:
-    - xform/eoi/eue/
-    - xform/(oe|eo)/eu/
-    - xform/yu/ue/
+    ############## 正則化：轉換為正確粵拼 ##############
+    - xform/([^ 'a])a(?=$|[ '])|aa?(?=[vxq])/$1aa/
+    - xform/(^|[ '])[jy]u(?!ng|k)/$1jyu/
+    - xform/(^|[ '])y(?=$|[ '])/$1j/
+    - xform/(^|[ '])yu?(n|t)?(?=$|[vxq '])/$1jyu$2/
+    - xform/(^|[ '])y/$1j/
+    - xform/(oe|eo)y(?=$|[vxq '])/eoi/
+    - xform/yu?/yu/
+    - xform/oe([int])(?=$|[vxq '])/eo$1/
+    - xform/eo(ng|k)?(?=$|[vxq '])/oe$1/
+    - xform/q(?=[aeiou])//
+    - xform/(g|k)wu/$1u/
+    ###################################################
+
     - xform/(^|[ '])j/$1y/
     - xform/(^|[ '])z/$1dz/
     - xform/(^|[ '])c/$1ts/
+    - xform/eoi/eue/
+    - xform/oe|eo/eu/
+    - xform/yu/ue/
+
     - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
     - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
     - xform/(^|[ '])([^ ']+?)qq/$1ˍ$2/

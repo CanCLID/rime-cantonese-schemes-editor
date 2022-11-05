@@ -16,20 +16,33 @@ schema:
 translator:
   prism: jyut6ping3_mw
   preedit_format:
+    ############## 正則化：轉換為正確粵拼 ##############
+    - xform/([^ 'a])a(?=$|[ '])|aa?(?=[vxq])/$1aa/
+    - xform/(^|[ '])[jy]u(?!ng|k)/$1jyu/
+    - xform/(^|[ '])y(?=$|[ '])/$1j/
+    - xform/(^|[ '])yu?(n|t)?(?=$|[vxq '])/$1jyu$2/
+    - xform/(^|[ '])y/$1j/
+    - xform/(oe|eo)y(?=$|[vxq '])/eoi/
+    - xform/yu?/yu/
+    - xform/oe([int])(?=$|[vxq '])/eo$1/
+    - xform/eo(ng|k)?(?=$|[vxq '])/oe$1/
+    - xform/q(?=[aeiou])//
+    - xform/(g|k)wu/$1u/
+    ###################################################
+
     - xform/(^|[ '])(kw|[ptkc])/$1$2‘/
-    - xform/(^|[ '])([bdgz])/$1\U$2/
-    - xlit|BDGZ|ptkc|
+    - xform/(^|[ '])([bdgz])/$1\U$2\E/
+    - xlit/BDGZ/ptkc/
     - xform/(^|[ '])c/$1ts/
     - xform/(^|[ '])j/$1y/
-    - xform/o(vv?|xx?|qq?)?($|[ '])/oh$1$2/
-    - xform/ou(vv?|xx?|qq?)?($|[ '])/o$1$2/
+    - xform/o($|[vxq '])/oh$1/
+    - xform/ou($|[vxq '])/o$1/
     - xform/yu/ue/
-    - xform/([^aeiou]|^)u($|[vxqit '])/$1oo$2/
-    - xform/un($|[vxq '])/oon$1/
+    - xform/(^|[^aeiou])u([int])?($|[vxq '])/$1oo$2$3/
     - xform/eo/u/
     - xform/oe($|[vxq '])/oeh$1/
     - xform/oe(ng|k)/eu$1/
-    - xform/aa(vv?|xx?|qq?)?($|[ '])/a$1$2/
+    - xform/aa($|[vxq '])/a$1/
 
     - xform/([aeiou])([aeioumngptk]+)?vv/$1̄$2/
     - xform/([aeiou])([aeioumngptk]+)?xx/$1̌$2/
@@ -37,3 +50,9 @@ translator:
     - xform/([aeiou])([aeioumngptk]+)?v/$1$2/
     - xform/([aeiou])([aeioumngptk]+)?x/$1́$2/
     - xform/([aeiou])([aeioumngptk]+)?q/$1̀$2/
+    - xform/(^|[ 'h])(m|ng)vv/$1$2̄/
+    - xform/(^|[ 'h])(m|ng)xx/$1$2̌/
+    - xform/(^|[ 'h])(m|ng)qq/$1$2̂/
+    - xform/(^|[ 'h])(m|ng)v/$1$2/
+    - xform/(^|[ 'h])(m|ng)x/$1$2́/
+    - xform/(^|[ 'h])(m|ng)q/$1$2̀/

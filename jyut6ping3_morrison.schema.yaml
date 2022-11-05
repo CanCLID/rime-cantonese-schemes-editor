@@ -16,10 +16,25 @@ schema:
 translator:
   prism: jyut6ping3_morrison
   preedit_format:
-    - xform/(^|[ '])([bdgz])/$1\U$2/
-    - xlit|BDGZ|ptkc|
+    ############## 正則化：轉換為正確粵拼 ##############
+    - xform/([^ 'a])a(?=$|[ '])|aa?(?=[vxq])/$1aa/
+    - xform/(^|[ '])[jy]u(?!ng|k)/$1jyu/
+    - xform/(^|[ '])y(?=$|[ '])/$1j/
+    - xform/(^|[ '])yu?(n|t)?(?=$|[vxq '])/$1jyu$2/
+    - xform/(^|[ '])y/$1j/
+    - xform/(oe|eo)y(?=$|[vxq '])/eoi/
+    - xform/yu?/yu/
+    - xform/oe([int])(?=$|[vxq '])/eo$1/
+    - xform/eo(ng|k)?(?=$|[vxq '])/oe$1/
+    - xform/q(?=[aeiou])//
+    - xform/(g|k)wu/$1u/
+    ###################################################
+
+    - xform/(^|[ '])([bdgz])/$1\U$2\E/
+    - xlit/BDGZ/ptkc/
     - xform/(^|[ '])c/$1ts/
     - xform/(^|[ '])j/$1y/
+    - xform/(^|[ '])ng/$1g/
 
     - xform/aai/AI/
     - xform/aau/AOU/
@@ -38,31 +53,25 @@ translator:
 
     - xform/(^|[^aeiou])i($|[vxq '])/$1E$2/
     - xform/(^|[^aeiou])iu/$1Ew/
-    - xform/(^|[^aeiou])i([mnpt])/$1EE$2/
-    - xform/EEng/Ing/
+    - xform/(^|[^aeiou])i([mnpt])($|[vxq '])/$1EE$2$3/
 
     - xform/(^|[^aeiou])oi/$1Oy/
     - xform/ou/Ow/
-    - xform/ong/Ong/
-    - xform/(^|[^aeiou])o(n|t)/$1OA$2/
+    - xform/(^|[^aeiou])o(n|t)($|[vxq '])/$1OA$2$3/
 
     - xform/eoi/Uy/
-    - xform/eon/yn/
-    - xform/eot/Ut/
+    - xform/eo/U/
 
-    - xform/(^|[^aeiouy])u($|[vxqnt '])/$1OO$2/
-    - xform/OOng/Ung/
     - xform/ui/OOy/
+    - xform/(^|[^aeiouy])u(n|t)?($|[vxq '])/$1OO$2$3/
 
-    - xform/yun/une/
+    - xform/yun(?!g)/une/ # 冇串錯
     - xform/yut/uet/
     - xform/yu/u/
 
-    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1im$3$4/
-    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1ing$3$4/
-    - xform/(^|[ '])ng/$1g/
+    - xform/(^|[ 'h])(m|ng)($|[vxq '])/$1i$2$3/
 
-    - xlit|AEIOU|aeiou|
+    - xlit/AEIOU/aeiou/
 
     - xform/([aeioumngptk])vv/$1⁴/
     - xform/([aeioumngptk])xx/$1⁵/

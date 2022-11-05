@@ -16,19 +16,32 @@ schema:
 translator:
   prism: jyut6ping3_wong_ipa
   preedit_format:
+    ############## 正則化：轉換為正確粵拼 ##############
+    - xform/([^ 'a])a(?=$|[ '])|aa?(?=[vxq])/$1aa/
+    - xform/(^|[ '])[jy]u(?!ng|k)/$1jyu/
+    - xform/(^|[ '])y(?=$|[ '])/$1j/
+    - xform/(^|[ '])yu?(n|t)?(?=$|[vxq '])/$1jyu$2/
+    - xform/(^|[ '])y/$1j/
+    - xform/(oe|eo)y(?=$|[vxq '])/eoi/
+    - xform/yu?/yu/
+    - xform/oe([int])(?=$|[vxq '])/eo$1/
+    - xform/eo(ng|k)?(?=$|[vxq '])/oe$1/
+    - xform/q(?=[aeiou])//
+    - xform/(g|k)wu/$1u/
+    ###################################################
+
     - xform/(^|[ '])z/$1dz/
     - xform/(^|[ '])c/$1ts/
     - xform/ng/ŋ/
     - xform/aa/A/
     - xform/a/ɐ/
     - xform/A/a/
-    - xform/(^|[^aeiou])e($|[vxqumnŋpk '])/$1ɛ$2/
-    - xform/(^|[^aeiou])o($|[vxqinŋtk '])/$1ɔ$2/
-    - xform/(oe|eo)i/œy/
-    - xform/(oe|eo)/œ/
+    - xform/eoi/œy/
+    - xform/oe|eo/œ/
+    - xform/e(?!i)/ɛ/
+    - xform/o(?!u)/ɔ/
     - xform/yu/y/
-    - xform/(^|[ '])(m)(qq?|xx?|vv?)?($|[ '])/$1$2̩$3$4/
-    - xform/(^|[ '])(ng)(qq?|xx?|vv?)?($|[ '])/$1$2̩$3$4/
+    - xform/(^|[ 'h])(m|ŋ)($|[vxq '])/$1$2̩$3/
 
     - xform/(^|[ '])([^ ']+?)vv/$1ˌ$2/
     - xform/(^|[ '])([^ ']+?)xx/$1ˏ$2/
